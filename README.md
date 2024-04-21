@@ -53,7 +53,7 @@ How it works:
 
 •	The app maintains the state of events even if the user navigates away from the current date.
 
-Use of this application:
+Uses of this application:
 
 •	Work Planning: Professionals can use the app to manage work-related events, such as deadlines, meetings, or project milestones.
 
