@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { View, Button, TextInput, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Calendar } from 'react-native-calendars';
+import { useNavigation } from '@react-navigation/native';
 
 const CalendarComponent = () => {
+  const navigation = useNavigation();
   const [selectedDate, setSelectedDate] = useState('');
   const [eventName, setEventName] = useState('');
   const [events, setEvents] = useState({});
@@ -28,19 +30,10 @@ const CalendarComponent = () => {
     setEvents(updatedEvents);
   };
 
-  const renderEventsForDate = () => {
-    if (!events[selectedDate]) {
-      return <Text>No events for this date</Text>;
-    }
-    return events[selectedDate].map((event, index) => (
-      <View key={index} style={styles.eventItem}>
-        <Text>{event}</Text>
-        <TouchableOpacity onPress={() => deleteEvent(index)}>
-          <Text style={styles.deleteButton}>Delete</Text>
-        </TouchableOpacity>
-      </View>
-    ));
+  const viewEvents = () => {
+    navigation.navigate('EventScreen', { date: selectedDate, events: events[selectedDate] || [], updateEvents: setEvents });
   };
+
 
   return (
     <View style={styles.container}>
@@ -57,10 +50,7 @@ const CalendarComponent = () => {
         onChangeText={setEventName}
       />
       <Button title="Add Event" onPress={addEvent} />
-      <View style={styles.eventsContainer}>
-        <Text style={styles.eventsHeading}>Events for {selectedDate}:</Text>
-        {renderEventsForDate()}
-      </View>
+      <Button title="View Events" onPress={viewEvents} />
     </View>
   );
 };
@@ -76,23 +66,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 20,
     paddingHorizontal: 10,
-  },
-  eventsContainer: {
-    marginTop: 20,
-  },
-  eventsHeading: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    marginBottom: 10,
-  },
-  eventItem: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 10,
-  },
-  deleteButton: {
-    color: 'red',
   },
 });
 
