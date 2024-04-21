@@ -47,6 +47,7 @@ How it works:
 •	Users can enter an event name in the text input field and tap "Add Event" to add it to the selected date.
 •	Added events can be viewed by clicking on view events button. Users can delete events by tapping the "Delete" button next to each event.
 •	The app maintains the state of events even if the user navigates away from the current date.
+
 Use of this application:
 Work Planning: Professionals can use the app to manage work-related events, such as deadlines, meetings, or project milestones.
 Academic Planning: Students can utilize the app to schedule their classes, exams, and study sessions.
