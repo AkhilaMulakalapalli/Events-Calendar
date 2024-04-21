@@ -42,6 +42,7 @@ npm run ios
 yarn ios
 ```
 How it works:
+
 •	Upon opening the app, users see a calendar interface.
 
 •	They can select a date by tapping on it, which highlights the selected date 
