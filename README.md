@@ -43,16 +43,25 @@ yarn ios
 ```
 How it works:
 •	Upon opening the app, users see a calendar interface.
+
 •	They can select a date by tapping on it, which highlights the selected date 
+
 •	Users can enter an event name in the text input field and tap "Add Event" to add it to the selected date.
+
 •	Added events can be viewed by clicking on view events button. Users can delete events by tapping the "Delete" button next to each event.
+
 •	The app maintains the state of events even if the user navigates away from the current date.
 
 Use of this application:
-Work Planning: Professionals can use the app to manage work-related events, such as deadlines, meetings, or project milestones.
-Academic Planning: Students can utilize the app to schedule their classes, exams, and study sessions.
-Event Planning: Individuals or organizations planning events can use the app to keep track of important dates and tasks leading up to the event.
-Reminder System: The app can serve as a reminder system, ensuring users don't forget important events or tasks by providing notifications or alerts.
+
+•	Work Planning: Professionals can use the app to manage work-related events, such as deadlines, meetings, or project milestones.
+
+•	Academic Planning: Students can utilize the app to schedule their classes, exams, and study sessions.
+
+•	Event Planning: Individuals or organizations planning events can use the app to keep track of important dates and tasks leading up to the event.
+
+•	Reminder System: The app can serve as a reminder system, ensuring users don't forget important events or tasks by providing notifications or alerts.
+
 
 If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
